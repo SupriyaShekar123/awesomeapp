@@ -1,15 +1,14 @@
 import React from "react";
 
-export default function Pokemon(){
+export default function Pokemon(props){
     return(
         <div>
-            <h2>Pokemon name: {"Charizard"}</h2>
-      <p>Weight: {90} kg</p>
-      <p>Awesome: {true}</p>
-      <p>Terrifying: {false}</p>
-      <p>What about null? {null}</p>
-      <p>And undefined? {undefined}</p>
-      <p>Abilities: {["Blaze", "Solar power", "Tough claws", "Drought"]}</p>
+            <h2>Pokemon name: {props.name}</h2>
+      <p>Weight: {props.weight} kg</p>
+      <p>Awesome: { props.awesome ? "Very" : "nope,not really"}</p>
+      <p>Terrifying: {props.terrifying ? "Very" : "nah, loveable"}</p>
+      <p>Abilities: {props.abilities}</p>
+      
         </div>
     )
 }
