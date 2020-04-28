@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './App.css';
 
 import Title from "./components/Title";
 import Pokemon from "./components/Pokemon"
@@ -75,7 +75,7 @@ const listingAbilities = abilitiesOf.map((pokemonList) =>{
 
 function App() {
   return (
-    <div className="App">
+    <div className="App-div">
     <main>
       <Title content="Some Simple Text" />
 
@@ -112,10 +112,10 @@ function App() {
       
     </main>
 
-<header className="App-header">
+
   
  
-</header>
+
 
     </div>
   )
