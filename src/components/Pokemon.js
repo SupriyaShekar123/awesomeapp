@@ -7,7 +7,8 @@ export default function Pokemon(props){
       <p>Weight: {props.weight} kg</p>
       <p>Awesome: { props.awesome ? "Very" : "nope,not really"}</p>
       <p>Terrifying: {props.terrifying ? "Very" : "nah, loveable"}</p>
-      <p>Abilities: {props.abilities}</p>
+      <p>Abilities: {props.abilities}
+    </p>
       
         </div>
     )

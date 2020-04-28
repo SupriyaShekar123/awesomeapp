@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './App.css';
+
 import Title from "./components/Title";
 import Pokemon from "./components/Pokemon"
 
@@ -50,10 +50,28 @@ const terrifyingOf = all_pokemon.map((terrifyingPokemon)=>{
   return terrifyingPokemon.weight
 })
 const abilitiesOf = all_pokemon.map((abilitiesPokemon)=>{
-  return (<li>{abilitiesPokemon.abilities}</li>)
+  return abilitiesPokemon.abilities
 })
 
 
+
+const listingAbilities = abilitiesOf.map((pokemonList) =>{
+    const abilities = pokemonList.map((ability)=>{
+       return <li>{ability}</li>
+    })
+      return <ul>{ abilities }</ul>
+})
+
+
+
+
+//const lstAbilitInd=listingAbilities.join('\r\n')
+
+//console.log("value of is " + listingAbilities)
+
+//const joinPokemon = listingAbilities.join('<li>')
+// console.log(joinPokemon)
+// const t= 'testing'
 
 function App() {
   return (
@@ -68,9 +86,27 @@ function App() {
                weight = {weightOf[0]}
                awesome = {awesomeOf[0]}
                terrifying ={terrifyingOf[0]}
-               abilities ={abilitiesOf[0]}
+               abilities = {listingAbilities[0]}
+      />
       
-               
+      <Pokemon name={nameOf[1]}
+               weight = {weightOf[1]}
+               awesome = {awesomeOf[1]}
+               terrifying ={terrifyingOf[1]}
+               abilities ={listingAbilities[1]}        
+      />
+
+<Pokemon name={nameOf[2]}
+               weight = {weightOf[2]}
+               awesome = {awesomeOf[2]}
+               terrifying ={terrifyingOf[2]}
+               abilities ={listingAbilities[2]}        
+      />
+      <Pokemon name={nameOf[3]}
+               weight = {weightOf[3]}
+               awesome = {awesomeOf[3]}
+               terrifying ={terrifyingOf[3]}
+               abilities ={listingAbilities[3]}        
       />
       
       
@@ -78,17 +114,7 @@ function App() {
 
 <header className="App-header">
   
-  <p>
-    Edit <code>src/App.js</code> and save tp reload.
-  </p>
-  <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+ 
 </header>
 
     </div>
